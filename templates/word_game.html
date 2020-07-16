@@ -1,0 +1,29 @@
+$def with (score, d_word, e_word)
+
+<title>DeutschFlashCards</title>
+
+<div class="flex-container">
+    <button>Count:<br>$score</button>
+    <a href="/type">Change Type</a>
+    <a href="/">Change Level</a>
+</div>
+
+$if e_word == None:
+    <div class="row word_box">
+        <form action="/game" method="POST">
+            <button type="submit" name="trans" value="$d_word" >$d_word</button>
+            <span>$e_word</span>
+        </form>
+        <a id="translate" href="https://translate.google.com/#view=home&op=translate&sl=de&tl=en&text=$d_word" target="_blank">
+            <i class="fas fa-volume-down"></i>
+        </a>
+    </div>
+
+
+$if d_word == None:
+    <div class="row word_box">
+        <form action="/game" method="GET">
+            <button type="submit">>></button>
+            <button>$e_word</button>
+        </form>
+    </div>

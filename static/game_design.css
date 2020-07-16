@@ -1,0 +1,31 @@
+body {background: GhostWhite no-repeat center fixed; background-size:cover}
+body {font-family:Courier New; font-size:1vw}
+* {box-sizing:border-box}
+
+/*side-box formats*/
+.flex-container {display:flex; flex-direction:column; margin-left:0vw; float:left}
+.flex-container button, .flex-container a {padding:1vw; width:6vw; height:4vw; color:white; background-color:DodgerBlue;
+                                           border:none; font-family:Courier New; font-weight:bold; font-size:1vw;
+                                           border-radius:1vw; text-align:center; margin-right:15vw;
+                                           margin-bottom:1vw; cursor:pointer; text-decoration:none}
+
+@media screen and (max-width: 600px) {.flex-container button {width:15vw; height:10vw; font-size:3vw; margin-right:5vw}}
+@media screen and (max-width: 600px) {.flex-container a {width:15vw; height:10vw; font-size:3vw; margin-right:5vw;
+                                                          background-color:Grey}}
+
+/*word-box formats*/
+.word_box {float:left}
+.word_box button, .word_box span {float:left; padding:1vw; width:20vw; height:10vw; color:white; background-color:DarkSlateGrey;
+                        text-align:center; word-spacing:0.2vw; letter-spacing:0.05vw; font-size:2vw; margin-left:2vw;
+                        font-weight:bold; border:none; cursor:pointer}
+
+ @media screen and (max-width: 600px) {.word_box button, .word_box span {width:35vw; height:25vw; font-size:4vw}}
+
+/*supportive formats*/
+a:hover, button[type="submit"]:hover {background-color:navy}
+
+.row::after {content:""; clear:both; display:table}
+
+a#translate {background-color:GhostWhite; margin-left:2vw}
+i {color:#666; font-size:3vw; margin-top:1vw}
+@media screen and (max-width: 1000px) {i {font-size:8vw}}
